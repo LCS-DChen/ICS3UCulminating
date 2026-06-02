@@ -14,6 +14,11 @@
 		B3103D782FCF4EBA003F9B23 /* HousesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3103D772FCF4EBA003F9B23 /* HousesListView.swift */; };
 		B3103D7A2FCF4EBA003F9B23 /* HouseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3103D792FCF4EBA003F9B23 /* HouseItemView.swift */; };
 		B3103D7C2FCF4EBA003F9B23 /* RELEASE.md in Resources */ = {isa = PBXBuildFile; fileRef = B3103D7B2FCF4EBA003F9B23 /* RELEASE.md */; };
+		B3103D812FCF5AB1003F9B23 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3103D802FCF5AB1003F9B23 /* Country.swift */; };
+		B3103D832FCF5AB1003F9B23 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3103D822FCF5AB1003F9B23 /* GameViewModel.swift */; };
+		B3103D852FCF5AB1003F9B23 /* GameMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3103D842FCF5AB1003F9B23 /* GameMenuView.swift */; };
+		B3103D872FCF5AB1003F9B23 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3103D862FCF5AB1003F9B23 /* GameView.swift */; };
+		B3103D892FCF5AB1003F9B23 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3103D882FCF5AB1003F9B23 /* GameOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		B3103D772FCF4EBA003F9B23 /* HousesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesListView.swift; sourceTree = "<group>"; };
 		B3103D792FCF4EBA003F9B23 /* HouseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseItemView.swift; sourceTree = "<group>"; };
 		B3103D7B2FCF4EBA003F9B23 /* RELEASE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE.md; sourceTree = "<group>"; };
+		B3103D802FCF5AB1003F9B23 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		B3103D822FCF5AB1003F9B23 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		B3103D842FCF5AB1003F9B23 /* GameMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMenuView.swift; sourceTree = "<group>"; };
+		B3103D862FCF5AB1003F9B23 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B3103D882FCF5AB1003F9B23 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				B3103D712FCF4EBA003F9B23 /* House.swift */,
+				B3103D802FCF5AB1003F9B23 /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -79,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B3103D742FCF4EBA003F9B23 /* HouseListViewModel.swift */,
+				B3103D822FCF5AB1003F9B23 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -88,6 +100,9 @@
 			children = (
 				B3103D772FCF4EBA003F9B23 /* HousesListView.swift */,
 				B3103D792FCF4EBA003F9B23 /* HouseItemView.swift */,
+				B3103D842FCF5AB1003F9B23 /* GameMenuView.swift */,
+				B3103D862FCF5AB1003F9B23 /* GameView.swift */,
+				B3103D882FCF5AB1003F9B23 /* GameOverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,11 +180,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3103D892FCF5AB1003F9B23 /* GameOverView.swift in Sources */,
 				B3103D7A2FCF4EBA003F9B23 /* HouseItemView.swift in Sources */,
 				B3103D722FCF4EBA003F9B23 /* House.swift in Sources */,
 				B3103D782FCF4EBA003F9B23 /* HousesListView.swift in Sources */,
 				B3103D752FCF4EBA003F9B23 /* HouseListViewModel.swift in Sources */,
+				B3103D872FCF5AB1003F9B23 /* GameView.swift in Sources */,
+				B3103D812FCF5AB1003F9B23 /* Country.swift in Sources */,
 				B3103D6D2FCF4EBA003F9B23 /* ICS3UCulminatingApp.swift in Sources */,
+				B3103D832FCF5AB1003F9B23 /* GameViewModel.swift in Sources */,
+				B3103D852FCF5AB1003F9B23 /* GameMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
