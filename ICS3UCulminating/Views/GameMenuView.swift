@@ -77,5 +77,5 @@ struct MenuButtonLabel: View {
 }
 
 #Preview {
-    GameMenuView()
+GameMenuView()
 }

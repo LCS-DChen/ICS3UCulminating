@@ -27,6 +27,7 @@ class GameViewModel {
     
     // MARK: - Stored properties
     private var allCountriesList: [Country]
+    private var usedCountries: [Country] = []
     var gameMode: GameMode = .flag
     var currentQuestion: Question?
     var score: Int = 0
@@ -49,6 +50,7 @@ class GameViewModel {
         self.streak = 0
         self.questionsAsked = 0
         self.isGameOver = false
+        self.usedCountries = []
         generateQuestion()
     }
     
@@ -59,31 +61,42 @@ class GameViewModel {
             return
         }
         
-        // Pick a random country for the question
-        let correctCountry = allCountriesList.randomElement()!
+        // Pick a random country for the question that hasn't been used this round
+        var correctCountry: Country?
+        while correctCountry == nil {
+            let candidate = allCountriesList.randomElement()!
+            if !usedCountries.contains(where: { $0.id == candidate.id }) {
+                correctCountry = candidate
+            }
+        }
         
+        // Add to used list
+        guard let finalCountry = correctCountry else { return }
+        usedCountries.append(finalCountry)
+
         // Pick 3 random incorrect countries
         var distractors: [Country] = []
         while distractors.count < 3 {
             if let randomCountry = allCountriesList.randomElement(),
-               randomCountry.id != correctCountry.id,
+               randomCountry.id != finalCountry.id,
                !distractors.contains(where: { $0.id == randomCountry.id }) {
                 distractors.append(randomCountry)
             }
         }
-        
+
         // Prepare options based on game mode
         var options: [String] = []
-        options.append(correctCountry.name)
+        options.append(finalCountry.name)
         for distractor in distractors {
             options.append(distractor.name)
         }
-        
+
         // Shuffle options so the correct one isn't always first
         options.shuffle()
-        
-        currentQuestion = Question(country: correctCountry, options: options, mode: gameMode)
+
+        currentQuestion = Question(country: finalCountry, options: options, mode: gameMode)
         questionsAsked += 1
+
     }
     
     // Check if the selected answer is correct
@@ -112,3 +125,5 @@ class GameViewModel {
         startGame(mode: self.gameMode)
     }
 }
+
+
