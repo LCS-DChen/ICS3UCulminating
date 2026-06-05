@@ -40,7 +40,7 @@ struct GameMenuView: View {
                         viewModel.startGame(mode: .capital)
                         showGame = true
                     }) {
-                        MenuButtonLabel(title: "Capital Guess Mode", icon: "building.columns.fill", color: .green)
+                        MenuButtonLabel(title: "Capital Guess Mode", icon: "building.columns.fill", color: .purple)
                     }
                 }
                 .padding(.horizontal)
